@@ -100,9 +100,9 @@ class AndroidFCMNotification implements OSNotificationServiceInterface
         );
         $data = array_merge(
             $message->getFCMOptions(),
-            array("notification" => $message->getData())
+            array("data" => $message->getData())
         );
-        
+
         // Perform the calls (in parallel)
         $this->responses = array();
         $fcmIdentifiers = $message->getFCMIdentifiers();
